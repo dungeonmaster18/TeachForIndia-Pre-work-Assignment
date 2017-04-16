@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">TeachForIndia</string>
+    <string name="message">Are you a Staff or Fellow Member?</string>
+    <string name="already_a_member_login">Already a member? Login</string>
+    <string name="create_account">Create Account</string>
+    <string name="email">Email</string>
+    <string name="name">Name</string>
+    <string name="password">Password</string>
+    <string name="browse_volunteer_opportunities">Browse Volunteer Opportunities</string>
+    <string name="or">OR</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_in">Sign in</string>
+    <string name="login">Login</string>
+    <string name="no_account_yet_sign_up">No account yet? SIgn Up</string>
+    <string name="logo">This is app logo</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="employee_id">Employee ID</string>
+    <string name="btn_link_to_register">Not a member? Create a new Account!</string>
+    <string name="btn_link_to_login">Already registered. Login Me!</string>
+    <string name="btn_forgot_password">Forgot password?</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="btn_back">Back</string>
+    <string name="title_activity_profile">profile</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="from">From</string>
+    <string name="location">Location</string>
+    <string name="opportunity_description">Opportunity Description</string>
+    <string name="opportunity_title">Opportunity Title</string>
+    <string name="to">To</string>
+    <string name="cancel">cancel</string>
+    <string name="create_opportunity">create_opportunity</string>
+    <string name="available_from">Available From</string>
+    <string name="available_to">Available To</string>
+    <string name="mobile_no">Mobile No</string>
+    <string name="why_you_want_to_volunteer">Why you want to volunteer?</string>
+    <string name="apply">Apply</string>
+    <string name="logout">Logout</string>
+    <string name="refresh">Refresh</string>
+    <string name="opportunity_image">Opportunity Image</string>
+    <string name="opportunity_description2">Opportunity Description:</string>
+    <string name="description">Description</string>
+    <string name="location2">Location:</string>
+    <string name="end_date">End Date:</string>
+    <string name="start_date">Start Date:</string>
+</resources>

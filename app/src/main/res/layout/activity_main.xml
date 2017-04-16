@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#242729"
+    android:layout_gravity="center"
+    android:id="@+id/lin_lay"
+    android:paddingTop="70dp"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/splash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/logo"
+        android:contentDescription="@string/logo" />
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-smallcaps"
+        android:gravity="center"
+        android:paddingTop="40dp"
+        android:text="@string/message"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textColor="@android:color/background_light" />
+
+    <RelativeLayout
+        android:id="@+id/register_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#242729"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/signin"
+            style="@style/BtnTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/browse"
+            android:elevation="2dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/sign_in"
+            android:theme="@style/BtnTheme" />
+
+        <Button
+            android:id="@+id/signup"
+            style="@style/BtnTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/browse"
+            android:layout_below="@+id/signin"
+            android:layout_marginTop="20dp"
+            android:elevation="2dp"
+            android:text="@string/sign_up"
+            android:theme="@style/BtnTheme" />
+
+        <Button
+            android:id="@+id/browse"
+            style="@style/BtnTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/signup"
+            android:layout_marginTop="70dp"
+            android:elevation="2dp"
+            android:text="@string/browse_volunteer_opportunities"
+            android:textSize="12sp"
+            android:theme="@style/BtnTheme" />
+
+        <TextView
+            android:id="@+id/Seperator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/signup"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/or"
+            android:textColor="@android:color/background_light"
+            tools:ignore="RtlHardcoded" />
+
+
+    </RelativeLayout>
+</LinearLayout>

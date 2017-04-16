@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1018601701544",
+    "firebase_url": "https://teachforindia-51336.firebaseio.com",
+    "project_id": "teachforindia-51336",
+    "storage_bucket": "teachforindia-51336.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1018601701544:android:8f6357230ecc02d6",
+        "android_client_info": {
+          "package_name": "com.example.umesh.teachforindia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1018601701544-v10qtng99j3nsqnmegkjt7q0pmfiorf0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.umesh.teachforindia",
+            "certificate_hash": "2eaf7ea26b429e8e68a725a86372ef9579e32f9c"
+          }
+        },
+        {
+          "client_id": "1018601701544-dtigh2jra8nfqtg0f7pks7k2kegvf88h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxc2qTxJQfdCTV193rdFV6Dsl13dOZy_c"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1018601701544-dtigh2jra8nfqtg0f7pks7k2kegvf88h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

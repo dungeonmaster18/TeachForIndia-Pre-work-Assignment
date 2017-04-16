@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    android:background="#242729">
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/opp_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/opportunity_image"
+        android:padding="15dp"
+        app:srcCompat="@mipmap/add_btn" />
+
+    <TextView
+        android:id="@+id/opportunity_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:text="@string/opportunity_title"
+        android:textStyle="bold"
+        android:layout_below="@+id/opp_image"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/buttonText"/>
+
+    <TextView
+        android:id="@+id/opportunity_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/description"
+        android:padding="15dp"
+        android:text="@string/description"
+        android:textColor="@color/buttonText"/>
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/opportunity_title"
+        android:layout_marginTop="20dp"
+        android:paddingStart="15dp"
+        android:text="@string/opportunity_description2"
+        android:textStyle="bold"
+        tools:ignore="RtlSymmetry"
+        android:textColor="@color/buttonText"/>
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/opportunity_description"
+        android:layout_marginTop="15dp"
+        android:paddingStart="15dp"
+        android:text="@string/location2"
+        android:textStyle="bold"
+        tools:ignore="RtlSymmetry"
+        android:textColor="@color/buttonText"/>
+
+    <TextView
+        android:id="@+id/opportunity_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/location"
+        android:layout_marginStart="13dp"
+        android:layout_toEndOf="@+id/location"
+        android:text="@string/location"
+        android:textColor="@color/buttonText"/>
+
+    <TextView
+        android:id="@+id/date_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/location"
+        android:layout_marginTop="15dp"
+        android:paddingStart="15dp"
+        android:text="@string/start_date"
+        android:textStyle="bold"
+        tools:ignore="RtlSymmetry"
+        android:textColor="@color/buttonText"/>
+
+    <TextView
+        android:id="@+id/start_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/date_from"
+        android:layout_marginStart="13dp"
+        android:layout_toEndOf="@+id/date_from"
+        android:text="@string/start_date"
+        android:textColor="@color/buttonText"/>
+
+    <TextView
+        android:id="@+id/date_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/date_from"
+        android:layout_marginTop="15dp"
+        android:paddingStart="15dp"
+        android:text="@string/end_date"
+        android:textStyle="bold"
+        tools:ignore="RtlSymmetry"
+        android:textColor="@color/buttonText"/>
+
+    <TextView
+        android:id="@+id/end_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/date_to"
+        android:layout_marginStart="13dp"
+        android:layout_toEndOf="@+id/date_to"
+        android:text="@string/end_date"
+        android:textColor="@color/buttonText"/>
+
+    <TextView
+        android:id="@+id/contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/date_to"
+        android:layout_marginTop="15dp"
+        android:paddingStart="15dp"
+        android:text="For more details contact:"
+        android:textStyle="bold"
+        tools:ignore="RtlSymmetry"
+        android:textColor="@color/buttonText"/>
+
+    <TextView
+        android:id="@+id/email_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/contact"
+        android:layout_marginStart="110dp"
+        android:layout_toEndOf="@+id/date_to"
+        android:text="@string/email"
+        android:textColor="@color/buttonText"/>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_apply"
+        style="@style/BtnTheme"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="95dp"
+        android:text="@string/apply"
+        android:theme="@style/BtnTheme"
+        android:layout_below="@+id/contact"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>
+
+    </ScrollView>
