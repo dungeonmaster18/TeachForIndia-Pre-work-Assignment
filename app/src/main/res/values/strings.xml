@@ -46,4 +46,18 @@
     <string name="location2">Location:</string>
     <string name="end_date">End Date:</string>
     <string name="start_date">Start Date:</string>
+    <string name="sort_by">Sort by</string>
+    <string name="step_into_our_classrooms_and_share_your_knowledge_experience_and_skills_with_our_children_by_volunteering_to_teach_and_or_assist_our_fellows_help_us_plan_execute_and_or_archive_our_events_across_the_country_to_further_strengthen_the_movement">Step into our classrooms and share your knowledge, experience and skills with our children by volunteering to teach and/or assist our Fellows. Help us plan, execute and/or archive our events across the country to further strengthen the movement.</string>
+    <string name="volunteer">Volunteer</string>
+    <string name="submit">submit</string>
+
+    <string-array name="sortby_array">
+        <item>None</item>
+        <item>Title</item>
+        <item>Location</item>
+        <item>Start Date</item>
+        <item>Last Date</item>
+    </string-array>
+
+
 </resources>

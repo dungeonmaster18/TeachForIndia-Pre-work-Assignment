@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -29,7 +30,7 @@ import com.squareup.picasso.Picasso;
 public class OpportunityActivity extends AppCompatActivity {
 
     private RecyclerView oppList;
-    private DatabaseReference mDatabase;
+    private DatabaseReference mDatabase,mDatabaseSelection;
     SwipeRefreshLayout mSwipeRefreshLayout;
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
@@ -60,6 +61,8 @@ public class OpportunityActivity extends AppCompatActivity {
 
         mDatabase= FirebaseDatabase.getInstance().getReference().child("opportunity");
 
+
+
         mSwipeRefreshLayout.setOnRefreshListener(
                 new SwipeRefreshLayout.OnRefreshListener() {
                     @Override
@@ -79,12 +82,21 @@ public class OpportunityActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
+        Bundle b=getIntent().getExtras();
+
+
+        String selection=b.getString("select").trim();
+
+
+        Log.v("TAG",selection);
+
+
         FirebaseRecyclerAdapter<Opportunity,OpportunityViewHolder> firebaseRecyclerAdapter =new FirebaseRecyclerAdapter<Opportunity, OpportunityViewHolder>(
 
                 Opportunity.class,
                 R.layout.opp_row,
                 OpportunityViewHolder.class,
-                mDatabase
+                mDatabase.orderByChild(selection)
 
         ) {
             @Override

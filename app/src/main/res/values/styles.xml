@@ -8,6 +8,11 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="ThemeSpinner">
+        <!-- Default color for the dropdown arrow and line -->
+        <item name="colorControlNormal">@color/colorAccent</item>
+    </style>
+
     <style name="BtnTheme" parent="Widget.AppCompat.Button.Colored">
 
         <item name="colorButtonNormal">@color/colorPrimary</item>

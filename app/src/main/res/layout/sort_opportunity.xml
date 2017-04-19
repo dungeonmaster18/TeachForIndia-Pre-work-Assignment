@@ -1,6 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFFF"
+    android:layout_gravity="center"
+    android:id="@+id/sort_opportunity"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/volunteer"
+        android:textSize="30sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp" />
+
+
+    <Spinner
+        android:id="@+id/select_opportunity"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:hint="@string/sort_by"
+        style="@style/Widget.AppCompat.Spinner.Underlined"
+        android:theme="@style/ThemeSpinner"
+        android:dropDownWidth="200dp"></Spinner>
+
+    <TextView
+        android:id="@+id/Description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="40dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/step_into_our_classrooms_and_share_your_knowledge_experience_and_skills_with_our_children_by_volunteering_to_teach_and_or_assist_our_fellows_help_us_plan_execute_and_or_archive_our_events_across_the_country_to_further_strengthen_the_movement" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_submit"
+        style="@style/BtnTheme"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/select_opportunity"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:padding="12dp"
+        android:text="@string/submit"
+        android:theme="@style/BtnTheme" />
+
+
+</RelativeLayout>

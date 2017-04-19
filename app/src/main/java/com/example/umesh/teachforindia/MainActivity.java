@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent i=new Intent(MainActivity.this,OpportunityActivity.class);
+                Intent i=new Intent(MainActivity.this,SortOpportunityActivity.class);
                 startActivity(i);
             }
         });
