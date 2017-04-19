@@ -15,6 +15,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
@@ -29,10 +31,22 @@ public class OpportunityActivity extends AppCompatActivity {
     private RecyclerView oppList;
     private DatabaseReference mDatabase;
     SwipeRefreshLayout mSwipeRefreshLayout;
+    private FirebaseAuth mAuth;
+    private FirebaseAuth.AuthStateListener mAuthListener;
 
     @Override
+
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        mAuth = FirebaseAuth.getInstance();
+
+        FirebaseUser user = mAuth.getCurrentUser();
+
+        if ( user != null) {
+            startActivity(new Intent(OpportunityActivity.this, LoginPage.class));
+            finish();
+        }
 
         setContentView(R.layout.opportunity_activity);
 
@@ -75,6 +89,7 @@ public class OpportunityActivity extends AppCompatActivity {
         ) {
             @Override
             protected void populateViewHolder(OpportunityViewHolder viewHolder, final Opportunity model, int position) {
+
 
                 viewHolder.setOpportunity_title(model.getOpportunity_title());
                 viewHolder.setOpportunity_description(model.getOpportunity_description());

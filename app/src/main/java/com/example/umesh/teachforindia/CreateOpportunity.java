@@ -22,8 +22,11 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -105,6 +108,7 @@ public class CreateOpportunity extends AppCompatActivity {
 
     }
 
+
     public static String random() {
         Random generator = new Random();
         StringBuilder randomStringBuilder = new StringBuilder();
@@ -141,6 +145,7 @@ public class CreateOpportunity extends AppCompatActivity {
         final String opp_from=from.getText().toString().trim();
         final String uid = mAuth.getCurrentUser().getUid();
 
+
         String imageUrl=random();
 
         StorageReference filepath=mStorageRef.child("Post_Images").child(imageUrl);
@@ -166,6 +171,7 @@ public class CreateOpportunity extends AppCompatActivity {
                 Intent intent = new Intent(CreateOpportunity.this, LoginPage.class);
                 progressDialog.dismiss();
                 startActivity(intent);
+                finish();
                 Toast.makeText(CreateOpportunity.this,
                         "Successfully Posted Opportunity " ,
                         Toast.LENGTH_SHORT).show();
@@ -179,7 +185,7 @@ public class CreateOpportunity extends AppCompatActivity {
                         // ...
                         progressDialog.dismiss();
                         Toast.makeText(CreateOpportunity.this,
-                                "Something Went Wrong!" ,
+                                "Something Went Wrong!Please Try Again" ,
                                 Toast.LENGTH_SHORT).show();
                         applyBtn.setEnabled(true);
                         cancelBtn.setEnabled(true);
@@ -266,14 +272,14 @@ public class CreateOpportunity extends AppCompatActivity {
         }
 
         if (opp_from.isEmpty() || !from_matcher.matches() ) {
-            from.setError("Date format is wrong eg:DD/MM/YY");
+            from.setError("Date format is wrong eg:DD/MM/YY or DD/MM/YYYY");
             valid = false;
         } else {
             from.setError(null);
         }
 
         if (opp_to.isEmpty() || !to_matcher.matches() ) {
-            to.setError("Date format is wrong eg:DD/MM/YY");
+            to.setError("Date format is wrong eg:DD/MM/YY or DD/MM/YYYY");
             valid = false;
         } else {
             to.setError(null);

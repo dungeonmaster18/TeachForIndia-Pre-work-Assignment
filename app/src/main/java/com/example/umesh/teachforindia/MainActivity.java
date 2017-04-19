@@ -33,9 +33,18 @@ public class MainActivity extends AppCompatActivity {
     Thread splashTread;
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
 
         mAuth = FirebaseAuth.getInstance();
+
+        FirebaseUser user = mAuth.getCurrentUser();
+
+        if ( user != null) {
+            startActivity(new Intent(MainActivity.this, LoginPage.class));
+            finish();
+        }
+
+        super.onCreate(savedInstanceState);
+
 
         setContentView(R.layout.activity_main);
         StartAnimations();

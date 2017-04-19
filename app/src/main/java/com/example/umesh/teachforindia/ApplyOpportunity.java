@@ -38,10 +38,23 @@ public class ApplyOpportunity extends AppCompatActivity implements View.OnClickL
 
     private EditText name,useremail,mobileno,availablefrom,availableto,reason;
     private Button applyBtn,cancelBtn;
+    private FirebaseAuth mAuth;
+    private FirebaseAuth.AuthStateListener mAuthListener;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        mAuth = FirebaseAuth.getInstance();
+
+        FirebaseUser user = mAuth.getCurrentUser();
+
+        if ( user != null) {
+            startActivity(new Intent(ApplyOpportunity.this, LoginPage.class));
+            finish();
+        }
+
+
         setContentView(R.layout.apply_opportunity);
 
         name = (EditText) findViewById(R.id.input_name);
@@ -255,14 +268,14 @@ public class ApplyOpportunity extends AppCompatActivity implements View.OnClickL
         }
 
         if (available_from.isEmpty() || !from_matcher.matches() ) {
-            availablefrom.setError("Date format is wrong eg:DD/MM/YY");
+            availablefrom.setError("Date format is wrong eg:DD/MM/YY or DD/MM/YYYY");
             valid = false;
         } else {
             availablefrom.setError(null);
         }
 
         if (available_to.isEmpty() || !to_matcher.matches() ) {
-            availableto.setError("Date format is wrong eg:DD/MM/YY");
+            availableto.setError("Date format is wrong eg:DD/MM/YY or DD/MM/YYYY");
             valid = false;
         } else {
             availableto.setError(null);

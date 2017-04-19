@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.squareup.picasso.Picasso;
 
 /**
@@ -20,9 +22,22 @@ public class OpportunityInfoActivity extends AppCompatActivity {
     private TextView title,description,location,startDate,endDate,email;
     private Button applyBtn;
     private ImageView oppImage;
+    private FirebaseAuth mAuth;
+    private FirebaseAuth.AuthStateListener mAuthListener;
+
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        mAuth = FirebaseAuth.getInstance();
+
+        FirebaseUser user = mAuth.getCurrentUser();
+
+        if ( user != null) {
+            startActivity(new Intent(OpportunityInfoActivity.this, LoginPage.class));
+            finish();
+        }
 
         setContentView(R.layout.opportunity_info);
 

@@ -48,9 +48,18 @@ public class RegisterActivity extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        mAuth = FirebaseAuth.getInstance();
+
+        FirebaseUser user = mAuth.getCurrentUser();
+
+        if ( user != null) {
+            startActivity(new Intent(RegisterActivity.this, LoginPage.class));
+            finish();
+        }
+
         setContentView(R.layout.signup);
         //Get Firebase auth instance
-        mAuth = FirebaseAuth.getInstance();
 
         useremail = (EditText) findViewById(R.id.input_email);
         pass = (EditText) findViewById(R.id.input_password);
@@ -236,7 +245,7 @@ public class RegisterActivity extends AppCompatActivity {
         }
 
         if (password.isEmpty()  || !pass_matcher.matches()) {
-            pass.setError("Password must contain atleast a Capital Letter[A-z},atleast a number[0-9],at least one lowercase letter[a-z] & a special character. ");
+            pass.setError("Password must contain atleast a Capital Letter[A-z},atleast a number[0-9],at least one lowercase letter[a-z] & a special character between 8 to 20");
             valid = false;
         } else {
             pass.setError(null);
