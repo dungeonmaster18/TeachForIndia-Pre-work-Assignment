@@ -87,7 +87,6 @@ public class OpportunityActivity extends AppCompatActivity {
 
         String selection=b.getString("select").trim();
 
-
         Log.v("TAG",selection);
 
 
@@ -96,7 +95,7 @@ public class OpportunityActivity extends AppCompatActivity {
                 Opportunity.class,
                 R.layout.opp_row,
                 OpportunityViewHolder.class,
-                mDatabase.orderByChild(selection)
+                mDatabaseSelection
 
         ) {
             @Override
@@ -178,9 +177,7 @@ public class OpportunityActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
 
         if (item.getItemId() == R.id.action_refresh){
-            Intent i = new Intent(OpportunityActivity.this,OpportunityActivity.class);
-            finish();
-            startActivity(i);
+            onStart();
         }
 
         return super.onOptionsItemSelected(item);
