@@ -84,7 +84,6 @@ public class OpportunityActivity extends AppCompatActivity {
 
         Bundle b=getIntent().getExtras();
 
-
         String selection=b.getString("select").trim();
 
         Log.v("TAG",selection);
@@ -95,7 +94,7 @@ public class OpportunityActivity extends AppCompatActivity {
                 Opportunity.class,
                 R.layout.opp_row,
                 OpportunityViewHolder.class,
-                mDatabaseSelection
+                mDatabase.orderByChild(selection)
 
         ) {
             @Override
