@@ -116,8 +116,8 @@ public class ApplyOpportunity extends AppCompatActivity implements View.OnClickL
     }
 
     public class Config {
-        public static final String EMAIL ="dungeonmaster018@gmail.com";
-        public static final String PASSWORD ="Umesh@1996";
+        public static final String EMAIL ="xxxx@gmail.com";   //Put your email address over here
+        public static final String PASSWORD ="XXXXXXXXX";     //Put your password over here
     }
 
     public class SendMail extends AsyncTask<Void,Void,Void> {
