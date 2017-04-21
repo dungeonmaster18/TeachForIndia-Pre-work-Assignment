@@ -1,5 +1,6 @@
 package com.example.umesh.teachforindia;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -90,6 +91,12 @@ public class OpportunityActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
+        final ProgressDialog progressDialog = new ProgressDialog(OpportunityActivity.this,
+                R.style.ThemeOverlay_AppCompat_Dialog);
+        progressDialog.setIndeterminate(true);
+        progressDialog.setMessage("Loading....");
+        progressDialog.show();
+
         Bundle b=getIntent().getExtras();
 
         String selection=b.getString("select").trim();
@@ -112,6 +119,8 @@ public class OpportunityActivity extends AppCompatActivity {
                 viewHolder.setOpportunity_title(model.getOpportunity_title());
                 viewHolder.setOpportunity_description(model.getOpportunity_description());
                 viewHolder.setUrl(getApplicationContext(),model.getUrl());
+
+                progressDialog.dismiss();
 
                  viewHolder.mView.setOnClickListener(new View.OnClickListener() {
                      @Override
