@@ -28,3 +28,7 @@ This app has been made for Teach for india pre-work assignment.
 1] [Firebase-Ui](https://github.com/firebase/FirebaseUI-Android).<br>
 2] [ArthurHub/Android-Image-Cropper](https://github.com/ArthurHub/Android-Image-Cropper).<br>
 3] [Squareup-Picasso](https://square.github.io/picasso/).<br>
+
+# Licence
+
+This project is licensed under the Apache 2.0 License - see the [LICENSE.md](LICENSE.md) file for details
