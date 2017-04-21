@@ -62,8 +62,9 @@ public class LoginPage extends AppCompatActivity {
 
         else if (item.getItemId() == R.id.action_logout){
             mAuth.signOut();
-            startActivity(new Intent(LoginPage.this,LoginActivity.class));
             finish();
+            startActivity(new Intent(LoginPage.this,LoginActivity.class));
+
         }
 
         return super.onOptionsItemSelected(item);
