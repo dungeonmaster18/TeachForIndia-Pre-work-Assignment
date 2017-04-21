@@ -70,7 +70,15 @@ public class OpportunityActivity extends AppCompatActivity {
                         Log.i("TAG", "onRefresh called from SwipeRefreshLayout");
 
                         onStart();
-                        mSwipeRefreshLayout.setRefreshing(false);
+                        new android.os.Handler().postDelayed(
+                                new Runnable() {
+                                    public void run() {
+
+                                        mSwipeRefreshLayout.setRefreshing(false);
+
+                                    }
+                                }, 3000);
+
                     }
                 }
         );
