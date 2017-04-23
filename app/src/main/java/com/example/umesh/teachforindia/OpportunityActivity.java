@@ -94,7 +94,7 @@ public class OpportunityActivity extends AppCompatActivity {
         final ProgressDialog progressDialog = new ProgressDialog(OpportunityActivity.this,
                 R.style.ThemeOverlay_AppCompat_Dialog);
         progressDialog.setIndeterminate(true);
-        progressDialog.setMessage("Loading....");
+        progressDialog.setMessage("Please wait Loading....");
         progressDialog.show();
 
         Bundle b=getIntent().getExtras();
