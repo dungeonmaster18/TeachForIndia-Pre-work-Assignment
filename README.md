@@ -31,4 +31,4 @@ This app has been made for Teach for india pre-work assignment.
 
 # Licence
 
-This project is licensed under the Apache 2.0 License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the Apache 2.0 License - see the [LICENSE](LICENSE) file for details
