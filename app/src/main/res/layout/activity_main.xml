@@ -76,12 +76,11 @@
             android:id="@+id/Seperator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/signup"
-            android:layout_marginLeft="110dp"
-            android:layout_marginTop="30dp"
             android:text="@string/or"
             android:textColor="@android:color/background_light"
-            tools:ignore="RtlHardcoded" />
+            android:layout_centerVertical="true"
+            android:layout_alignStart="@+id/browse"
+            android:layout_marginStart="110dp" />
 
 
     </RelativeLayout>

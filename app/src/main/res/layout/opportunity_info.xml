@@ -159,11 +159,10 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:layout_marginStart="95dp"
+        android:layout_centerHorizontal="true"
         android:text="@string/apply"
         android:theme="@style/BtnTheme"
-        android:layout_below="@+id/contact"
-        android:layout_alignParentStart="true" />
+        android:layout_below="@+id/contact"/>
 
 
 </RelativeLayout>
