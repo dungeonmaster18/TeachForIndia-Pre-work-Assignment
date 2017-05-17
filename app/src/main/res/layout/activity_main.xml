@@ -42,8 +42,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignEnd="@+id/browse"
-            android:elevation="2dp"
             android:layout_marginTop="20dp"
+            android:elevation="2dp"
             android:text="@string/sign_in"
             android:theme="@style/BtnTheme" />
 
@@ -76,12 +76,10 @@
             android:id="@+id/Seperator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/signup"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="112dp"
             android:text="@string/or"
-            android:textColor="@android:color/background_light"
-            android:layout_centerVertical="true"
-            android:layout_alignStart="@+id/browse"
-            android:layout_marginStart="112dp" />
-
-
+            android:textColor="@android:color/background_light" />
     </RelativeLayout>
 </LinearLayout>
