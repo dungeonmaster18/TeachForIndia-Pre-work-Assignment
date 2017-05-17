@@ -80,7 +80,7 @@
             android:textColor="@android:color/background_light"
             android:layout_centerVertical="true"
             android:layout_alignStart="@+id/browse"
-            android:layout_marginStart="110dp" />
+            android:layout_marginStart="112dp" />
 
 
     </RelativeLayout>
