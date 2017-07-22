@@ -23,7 +23,7 @@ This app has been made for Teach for india pre-work assignment.
 3] Firebase Database.<br>
 4] Firebase Storage.<br>
 
-# API's Used
+# API's and Library's Used
 
 1] [Firebase-Ui](https://github.com/firebase/FirebaseUI-Android).<br>
 2] [ArthurHub/Android-Image-Cropper](https://github.com/ArthurHub/Android-Image-Cropper).<br>
