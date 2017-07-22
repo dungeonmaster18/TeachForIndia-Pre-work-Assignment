@@ -4,7 +4,7 @@ This app has been made for Teach for india pre-work assignment.
 
 # Features
 
-1] The TFI fellow and staff and create their account and can login with credential used during signup.<br>
+1] The TFI fellow and staff can create their account and can login with credential used during signup.<br>
 2] After signing in they can create volunteer opportunity.<br>
 3] Any person seeking for these opportunities can search for the same.<br>
 4] Opportunities Can sort by title,location,start date, end date.<br>
