@@ -1,24 +1,31 @@
 language: android
-jdk: oraclejdk8
-sudo: required # For faster internet speeds and more memory
-before_install:
-  - mkdir "$ANDROID_HOME/licenses" || true
-  - echo -e "\n8933bad161af4178b1185d1a37fbf41ea5269c55" > "$ANDROID_HOME/licenses/android-sdk-license"
-  - echo -e "\n84831b9409646a918e30573bab4c9c91346d8abd" > "$ANDROID_HOME/licenses/android-sdk-preview-license"
 android:
-  components:
-    # https://github.com/travis-ci/travis-ci/issues/6040#issuecomment-219367943
-    - tools
-    - tools
-before_cache:
-  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
-  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
-cache:
-  directories:
-    - $HOME/.gradle/caches/
-    - $HOME/.gradle/wrapper/
-    - $HOME/.android/build-cache
+components:
+# Uncomment the lines below if you want to
+# use the latest revision of Android SDK Tools
+# - platform-tools
+# - tools
+
+# The BuildTools version used by your project
+- build-tools-25.0.2
+
+# The SDK version used to compile your project
+- android-25
+
+
+# Specify at least one system image,
+# if you need to run emulator(s) during your tests
+- sys-img-armeabi-v7a-android-22
+- sys-img-armeabi-v7a-android-17
+
+before_install:
+- chmod +x gradlew
 
 before_script:
-  - ${ANDROID_HOME}tools/bin/sdkmanager --channel=3 "tools" "platform-tools" "build-tools;25.0.2" "platforms;android-25" "extras;google;m2repository"
-script: ./build.sh
+  - mv library/google-services.json app/google-services.json
+  - ${ANDROID_HOME}tools/bin/sdkmanager --channel=3 "tools" "platform-tools" "build-tools;25.0.2" "platforms;android-25" "extras;google;m2re
+pository"
+
+
+script:
+- ./gradlew assembleRelease --stacktrace
