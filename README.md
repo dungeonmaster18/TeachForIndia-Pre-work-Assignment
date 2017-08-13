@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/dungeonmaster18/TeachForIndia-Pre-work-Assignment.svg?branch=master)](https://travis-ci.org/dungeonmaster18/TeachForIndia-Pre-work-Assignment)
+
 # TeachForIndia-Pre-work-Assignment
 
 This app has been made for Teach for india pre-work assignment.
