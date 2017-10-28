@@ -1,42 +1,25 @@
-# https://docs.travis-ci.com/user/languages/android
 language: android
-jdk: oraclejdk8
-# Container builds don't have enough memory to reliably finish without being
-# killed, so pretend sudo is required so we don't use the container infra.
-# See: https://github.com/travis-ci/travis-ci/issues/5582
-sudo: required
-
-env:
-    global:
-        - ADB_INSTALL_TIMEOUT=10 # Default is 2 minutes, bump to 10
-
 android:
-    components:
-        - tools
-        - platform-tools
-        - android-25
-        - build-tools-25.0.2
+components:
+# Uncomment the lines below if you want to
+# use the latest revision of Android SDK Tools
+# - platform-tools
+# - tools
 
-        - extra-android-m2repository
-        - extra-google-m2repository
+# The BuildTools version used by your project
+- build-tools-25.0.2
 
-        - sys-img-armeabi-v7a-android-16
-        - sys-img-armeabi-v7a-android-17
-        - sys-img-armeabi-v7a-android-18
-        - sys-img-armeabi-v7a-android-19
-        - sys-img-armeabi-v7a-android-21
+# The SDK version used to compile your project
+- android-25
 
-# "avoid uploading the cache after every build"
-before_cache:
-    - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
-    - rm -rf $HOME/.gradle/caches/*/plugin-resolution/
 
-cache:
-    directories:
-        - $HOME/.gradle/caches/
-        - $HOME/.gradle/wrapper/
-        - $HOME/.android/build-cache
+# Specify at least one system image,
+# if you need to run emulator(s) during your tests
+- sys-img-armeabi-v7a-android-22
+- sys-img-armeabi-v7a-android-17
+
+before_install:
+- chmod +x gradlew
 
 script:
-    # Build the library + run unit tests, run device tests, build the test app
-- ./gradlew 
+- ./gradlew assembleRelease --stacktrace
