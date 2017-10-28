@@ -31,6 +31,6 @@ This app has been made for Teach for india pre-work assignment.
 2] [ArthurHub/Android-Image-Cropper](https://github.com/ArthurHub/Android-Image-Cropper).<br>
 3] [Squareup-Picasso](https://square.github.io/picasso/).<br>
 
-# Licence
+# License
 
 This project is licensed under the Apache 2.0 License - see the [LICENSE](LICENSE) file for details
